@@ -1,0 +1,36 @@
+module.exports = {
+  env: { browser: true, es2021: true, node: true },
+  extends: ["prettier", "eslint:recommended", "prettier"],
+  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  rules: {
+    "no-var": ["error"],
+    "prefer-spread": ["error"],
+    "no-unused-expressions": ["error"],
+    "no-new-func": ["error"],
+    "no-constructor-return": ["error"],
+    "no-else-return": ["error"],
+    "no-unsafe-optional-chaining": ["error"],
+    "no-unreachable-loop": ["error"],
+    "no-param-reassign": ["error"],
+    "no-use-before-define": ["error"],
+    "max-depth": ["error", { max: 3 }],
+    "padding-line-between-statements": [
+      "error",
+      { blankLine: "always", prev: "*", next: "return" },
+    ],
+    quotes: ["error", "double", { avoidEscape: true }],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "brace-style": ["error", "1tbs"],
+    "no-restricted-globals": ["off"],
+    "no-alert": ["warn"],
+    "no-console": [
+      "warn",
+      {
+        allow: ["warn", "error"],
+      },
+    ],
+    "prefer-template": ["error"],
+    "quote-props": ["error", "as-needed"],
+  },
+};
